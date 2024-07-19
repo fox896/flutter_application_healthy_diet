@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'meal_page.dart'; // Import the meal_page.dart file
 
 class RecordApp extends StatefulWidget {
   @override
@@ -41,28 +42,48 @@ class _RecordAppState extends State<RecordApp> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MealPage(mealName: '早餐')),
+                  );
+                },
                 child: Text('早餐', style: TextStyle(fontSize: 12)),
                 style: ElevatedButton.styleFrom(
                   padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 ),
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MealPage(mealName: '午餐')),
+                  );
+                },
                 child: Text('午餐', style: TextStyle(fontSize: 12)),
                 style: ElevatedButton.styleFrom(
                   padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 ),
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MealPage(mealName: '晚餐')),
+                  );
+                },
                 child: Text('晚餐', style: TextStyle(fontSize: 12)),
                 style: ElevatedButton.styleFrom(
                   padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 ),
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MealPage(mealName: '加餐')),
+                  );
+                },
                 child: Text('加餐', style: TextStyle(fontSize: 12)),
                 style: ElevatedButton.styleFrom(
                   padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -95,10 +116,8 @@ class _RecordAppState extends State<RecordApp> {
             ),
           ),
           BottomNavigationBar(
-            // type: BottomNavigationBarType.fixed,//可调整点击前样式
             items: [
               BottomNavigationBarItem(
-                
                 icon: Icon(Icons.book, size: 20),
                 label: '记录',
               ),
